@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anamnese AI</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/genai": "https://esm.sh/@google/genai@^0.12.0"
+        }
+      }
+    </script>
+    <script type="module" src="index.tsx"></script>
+</head>
+<body>
+    <div id="app-container">
+        <header>
+            <h1>Anamnese AI</h1>
+            <p>Organize suas anotações de forma inteligente a partir de textos fragmentados.</p>
+        </header>
+
+        <div class="tabs" id="template-tabs">
+            <button class="tab active" data-template="adult-routine">Rotina do Adulto</button>
+            <button class="tab" data-template="pediatrics">Puericultura</button>
+            <button class="tab" data-template="prenatal">Pré-natal</button>
+            <button class="tab" data-template="mental-health">Saúde Mental</button>
+        </div>
+
+        <main>
+            <div id="input-section" class="card">
+                <h2>Anotações do Paciente</h2>
+                <textarea id="prompt-input" rows="15" placeholder="Cole ou digite as anotações do paciente aqui..."></textarea>
+                <button id="generate-button">Organizar Anamnese</button>
+            </div>
+            <div id="output-section" class="card">
+                <h2>Resultado</h2>
+                <div id="loader" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Organizando informações...</p>
+                </div>
+                <div id="output-content">
+                    <p class="placeholder">A anamnese organizada aparecerá aqui.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

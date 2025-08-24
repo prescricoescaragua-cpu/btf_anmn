@@ -1,0 +1,5 @@
+{
+  "name": "Super-Anamnesis",
+  "description": "Organize patient notes into a structured anamnesis record using AI.",
+  "requestFramePermissions": []
+}
